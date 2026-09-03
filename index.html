@@ -7,8 +7,6 @@
 <link rel="stylesheet" href="Css1.css">
 </head>
 <body>
-
-  <button onclick="openFullscreen()">ఫుల్‌స్క్రీన్ చేయండి</button>
   
 <script src="java1.js"></script>
   
@@ -31,17 +29,24 @@
 
     
     <script>
-        var elem = document.documentElement;
-        function openFullscreen() {
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) { /* Safari */
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) { /* IE11 */
-                elem.msRequestFullscreen();
-            }
-        }
-    </script>
+document.body.addEventListener('touchstart', function() {
+    goFullAndRotate();
+});
+
+document.body.addEventListener('click', function() {
+    goFullAndRotate();
+});
+
+function goFullAndRotate() {
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    }
+    if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape');
+    }
+}
+</script>
 
 </body>
 </html>
