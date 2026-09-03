@@ -26,7 +26,20 @@
  <!-- మీ ఇమేజ్ స్లైడ్‌లు ఇక్కడ ఉంటాయి -->
 </div>
 
+    <button onclick="openFullscreen()">ఫుల్‌స్క్రీన్ చేయండి</button>
 
+    <script>
+        var elem = document.documentElement;
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
+    </script>
 
 </body>
 </html>
