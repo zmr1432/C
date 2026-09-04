@@ -46,8 +46,6 @@ body, html {
 }
 
 .container:hover .nav-btn {
-
-  
   opacity: 1;
 }
 
@@ -65,16 +63,16 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 0px;
   background-color: #ffffff;
-  gap: 20px;
-  flex-wrap: wrap; /* మొబైల్ స్క్రీన్‌లలో కిందకి రావడానికి */
+  gap: 0px;
+   /* మొబైల్ స్క్రీన్‌లలో కిందకి రావడానికి */
 }
 
 /* ఎడమవైపు ఇమేజ్ బాక్స్ */
 .left-banner {
   flex: 1;
-  min-width: 280px;
+  min-width: 80px;
 }
 
 .left-banner img {
@@ -86,13 +84,13 @@ body, html {
 /* కుడివైపు కంటెంట్ బాక్స్ */
 .right-content {
   flex: 1;
-  min-width: 280px;
+  min-width: 80px;
 }
 
 .right-content h2 {
   font-size: 24px;
   color: #333333;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 }
 
 .right-content p {
@@ -105,7 +103,7 @@ body, html {
 .features {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1px;
 }
 
 .features li {
@@ -137,12 +135,5 @@ body, html {
   background-color: #25d366; /* వాట్సాప్ గ్రీన్ */
   color: white;
 }
-
-
-
-
-
-
-
 
 
