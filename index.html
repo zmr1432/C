@@ -4,11 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fullscreen Images with Buttons</title>
-<link rel="stylesheet" href="Css1.css">
+<link rel="stylesheet" href="duplicatecss1.css">
+
+
+  
 </head>
+
 <body>
   
-<script src="java1.js"></script>
+<script src="java1.js"></script>  
   
 <div class="container">
   <div class="image-slide active">
@@ -20,31 +24,24 @@
 
   
   
-  
   <div class="banner-container">
-  
   <div class="left-banner">
-    <img src="your-image.jpg" alt="Photo Studio Banner">
-  </div>
-
+</div>
   <div class="right-content">
-    <h2>Best Photo Frames & Studio</h2>
-    <p>మీ మధుర జ్ఞాపకాలను అందమైన ఫ్రేమ్‌లుగా మలచుకోండి.</p>
-    
+    <h2>JNN COMPUTER</h2> 
+    <p>మీ మధుర క్షణాలను అందంగా భద్రపరుచుకోండి.</p>
     <ul class="features">
-      <li>✔ High Quality Passport Photos</li>
-      <li>✔ Customized Photo Frames</li>
-      <li>✔ Instant Delivery</li>
+      <li>High Quality Passport Photos</li>
+      <li>Customized Photo Frames</li>
+      <li>Instant Delivery</li>
     </ul>
-
     <div class="btn-group">
-      <a href="tel:9876543210" class="btn primary-btn">Call Now</a>
-      <a href="https://wa.me/919876543210" class="btn whatsapp-btn">WhatsApp Order</a>
+      <a href="tel:7702996800" class="btn call-btn">Call Now</a>
+      <a href="https://wa.me/7702996800" class="btn whatsapp-btn">WhatsApp Order</a>
     </div>
   </div>
-
 </div>
-
+  
   
   
   <button class="nav-btn prev-btn">&lt;</button>
@@ -59,25 +56,6 @@
 </div>
 
     
-    <script>
-document.body.addEventListener('touchstart', function() {
-    goFullAndRotate();
-});
-
-document.body.addEventListener('click', function() {
-    goFullAndRotate();
-});
-
-function goFullAndRotate() {
-    var elem = document.documentElement;
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    }
-    if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape');
-    }
-}
-</script>
 
 </body>
 </html>
