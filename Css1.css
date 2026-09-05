@@ -35,7 +35,7 @@ body, html {
 .nav-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-25%);
   background: rgba(255, 255, 255, 0.5);
   border: none;
   font-size: 2rem;
@@ -58,82 +58,97 @@ body, html {
 
 
 
-/* పూర్తి బ్యానర్ కంటైనర్ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFE8E3;
+}
 .banner-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px;
-  background-color: #ffffff;
-  gap: 0px;
-   /* మొబైల్ స్క్రీన్‌లలో కిందకి రావడానికి */
-}
-
-/* ఎడమవైపు ఇమేజ్ బాక్స్ */
-.left-banner {
-  flex: 1;
-  min-width: 80px;
-}
-
-.left-banner img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-/* కుడివైపు కంటెంట్ బాక్స్ */
 .right-content {
-  flex: 1;
-  min-width: 80px;
+  flex: 0 0 32%;
+  max-width: 32%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 .right-content h2 {
   font-size: 24px;
-  color: #333333;
-  margin-bottom: 1px;
+  margin-bottom: 10px;
+  color: #333;
 }
-
 .right-content p {
-  color: #666666;
   font-size: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+  color: #666;
+  line-height: 1.5;
 }
-
-/* లిస్ట్ స్టైల్ */
 .features {
   list-style: none;
-  padding: 0;
-  margin-bottom: 1px;
+  margin-bottom: 20px;
 }
-
 .features li {
   font-size: 14px;
+  margin-bottom: 8px;
   color: #444;
-  margin-bottom: 6px;
 }
-
-/* బటన్స్ డిజైన్ */
 .btn-group {
   display: flex;
+  flex-direction: column;
   gap: 10px;
 }
-
 .btn {
+  display: block;
+  text-align: center;
   text-decoration: none;
-  padding: 10px 18px;
+  padding: 12px;
   border-radius: 6px;
+  font-size: 16px;
   font-weight: bold;
-  font-size: 14px;
-}
-
-.primary-btn {
-  background-color: #d97706; /* గోల్డ్/ఆరెంజ్ థీమ్ */
   color: white;
 }
-
+.call-btn {
+  background-color: #d97706;
+}
 .whatsapp-btn {
-  background-color: #25d366; /* వాట్సాప్ గ్రీన్ */
-  color: white;
+  background-color: #25d366;
 }
+
+
+
+@keyframes colorShift {
+  0% { color: #ff007f; }
+  33% { color: #00ffcc; }
+  66% { color: #ffcc00; }
+  100% { color: #ff007f; }
+}
+
+@keyframes titleGlow {
+  0%, 100% { text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f; }
+  50% { text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc; }
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  animation: colorShift 6s infinite, titleGlow 3s infinite;
+}
+
+
 
 
