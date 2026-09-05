@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.image-slide');
   const prevBtn = document.querySelector('.prev-btn');
@@ -23,5 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
     screen.orientation.lock('landscape').catch(err => console.error(err));
   }
 });
+
+document.body.addEventListener('touchstart', function() {
+    goFullAndRotate();
+});
+
+document.body.addEventListener('click', function() {
+    goFullAndRotate();
+});
+
+function goFullAndRotate() {
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    }
+    if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape');
+    }
+}
 
 
